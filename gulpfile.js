@@ -3,7 +3,7 @@ var PORT, _s, banner, browserSync, changed, concat, cssmin, dist, gulp, gutil, h
 
 gulp = require("gulp");
 gutil = require("gulp-util");
-sass = require("gulp-sass");
+sass = require('gulp-sass')(require('sass'));
 concat = require("gulp-concat");
 header = require("gulp-header");
 uglify = require("gulp-uglify");
@@ -46,7 +46,7 @@ src = {
         node_modules: [
             "assets/js/src/libs/subbscribe.js",
             "node_modules/ghosthunter/dist/jquery.ghosthunter.js",
-            "node_modules/fitvids/fitvids.min.js",
+            "node_modules/fitvids/dist/fitvids.min.js",
             "node_modules/prismjs/prism.js",
             "node_modules/toastr/build/toastr.min.js",
             "node_modules/store/dist/store.modern.min.js"
